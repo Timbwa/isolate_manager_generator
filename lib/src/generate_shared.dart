@@ -262,8 +262,8 @@ bool _checkAnnotation(Element element) {
     if (annotationElement is PropertyAccessorElement) {
       // TODO: Change to `variable2` when bumping the `analyzer` to `^6.0.0`
       // ignore: deprecated_member_use
-      final variable = annotationElement.variable;
-      if (variable.name == _constAnnotation) {
+      final variable = annotationElement.variable2;
+      if (variable!.name == _constAnnotation) {
         return true;
       }
     }

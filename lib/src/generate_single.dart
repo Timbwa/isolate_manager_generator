@@ -296,7 +296,7 @@ AnnotationResult? _getIsolateManagerWorkerAnnotationValue(Element element) {
     if (annotationElement is ConstructorElement) {
       // TODO: Change to `variable2` when bumping the `analyzer` to `^6.0.0`
       // ignore: deprecated_member_use
-      final enclosingElement = annotationElement.enclosingElement;
+      final enclosingElement = annotationElement.enclosingElement3;
       if (enclosingElement is ClassElement) {
         if (enclosingElement.name == classAnnotation) {
           return AnnotationResult(
@@ -313,8 +313,8 @@ AnnotationResult? _getIsolateManagerWorkerAnnotationValue(Element element) {
     } else if (annotationElement is PropertyAccessorElement) {
       // TODO: Change to `variable2` when bumping the `analyzer` to `^6.0.0`
       // ignore: deprecated_member_use
-      final variable = annotationElement.variable;
-      if (variable.name == constAnnotation) {
+      final variable = annotationElement.variable2;
+      if (variable!.name == constAnnotation) {
         return AnnotationResult(
           workerName: '',
           isCustomWorker: false,
